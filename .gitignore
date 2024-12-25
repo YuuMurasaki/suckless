@@ -1,0 +1,10 @@
+# Ignore object files
+*.o
+
+# Ignore other common build artifacts
+*.out
+*.a
+*.so
+
+# Ignore generated files
+*.log
