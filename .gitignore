@@ -1,3 +1,15 @@
+# Executable files
+dmenu/dmenu
+dmenu/dmenu_path
+dmenu/dmenu_run
+dmenu/stest
+
+dwm/dwm
+
+dwmblocks/dwmblocks
+
+st/st
+
 # Ignore object files
 *.o
 
