@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -29,8 +29,8 @@ static const Rule rules[] = {
 	 */
 	/* class       instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",      NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",   NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "KeePassXC", NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "Firefox",   NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "KeePassXC", NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -91,6 +91,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot_crop") },
+	{ 0,				XK_Print,  spawn,          SHCMD("screenshot_fullscreen") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
