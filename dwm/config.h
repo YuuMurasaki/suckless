@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=14" };
+static const char *fonts[]          = { "monospace:size=12" };
 
 /* theme */
 static const char col_gray1[]       = "#222222";
@@ -91,8 +91,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot_crop") },
-	{ 0,				XK_Print,  spawn,          SHCMD("screenshot_fullscreen") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim_select") },
+	{ 0,				XK_Print,  spawn,          SHCMD("maim_fullscreen") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
