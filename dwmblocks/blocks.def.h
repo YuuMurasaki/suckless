@@ -2,10 +2,10 @@
 
 static const Block blocks[] = {
     /*Icon*/        /*Command*/                                     /*Update Interval*/     /*Update Signal*/
-    { "Mem:",       "sb_memory",                                    60,		                0 },
-    { " ",         "curl wttr.in/Thanhhoa?format='%t'",            3600,		            0 },
+    { "",           "sb_memory",                                    60,		                0 },
     { "",           "sb_internet",                                  120,                    0 },
     { " ",         "date +'%H:%M'",                                60,                     0 },
+    { " ",         "date +'%b %d (%a)'",                           0,                      0 },
 };
 
 /* Sets delimiter between status commands. NULL character ('\0') means no delimiter. */
