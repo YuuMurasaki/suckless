@@ -4,6 +4,10 @@ dmenu/stest
 dwm/dwm
 st/st
 
+# Ignore patch files
+*.orig
+*.rej
+
 # Ignore object files
 *.o
 
