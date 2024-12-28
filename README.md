@@ -2,11 +2,11 @@
 - this is my build of suckless programs
 - There are dwm, dmenu and st
 
-## Patches
-# Dwm
+### Patches
+# dwm
 + alwayscenter
 + useless gap
 
 
-# St
+# st
 + 
