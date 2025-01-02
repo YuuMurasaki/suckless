@@ -93,9 +93,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim_select") },
-	{ 0,				XK_Print,  spawn,          SHCMD("maim_fullscreen") },
+	{ MODKEY,                       XK_x,      spawn,          SHCMD("sh $HOME/.local/bin/power_options") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("sh $HOME/.local/bin/maim_select") },
+	{ 0,				XK_Print,  spawn,          SHCMD("sh $HOME/.local/bin/maim_fullscreen") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
