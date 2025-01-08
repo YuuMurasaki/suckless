@@ -22,7 +22,6 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "", "" };
-//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -33,6 +32,7 @@ static const Rule rules[] = {
 	{ "Gimp",       NULL,       NULL,       0,            1,           -1 },
 	{ "FreeTube",   NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "librewolf",  NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "Firefox",    NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "KeePassXC",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -63,8 +63,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]     = { "st", NULL };
-static const char *browsercmd[]  = { "librewolf", NULL };
+static const char *termcmd[]     = { "$TERMINAL", NULL };
+static const char *browsercmd[]  = { "$BROWSER", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -93,9 +93,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY,                       XK_x,      spawn,          SHCMD("sh $HOME/.local/bin/power_options") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("sh $HOME/.local/bin/maim_select") },
-	{ 0,				XK_Print,  spawn,          SHCMD("sh $HOME/.local/bin/maim_fullscreen") },
+	{ MODKEY|ShiftMask,             XK_Print,  spawn,          SHCMD("set_wallpaper") },
+	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
+	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
