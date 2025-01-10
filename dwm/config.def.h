@@ -94,6 +94,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ ControlMask|ShiftMask,        XK_Escape, spawn,          SHCMD("st -e htop 2>/dev/null") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e lf 2>/dev/null") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
