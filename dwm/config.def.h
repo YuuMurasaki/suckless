@@ -68,7 +68,7 @@ static const char *browsercmd[]     = { "librewolf", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -97,7 +97,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e lf 2>/dev/null") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
-	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
+	{ MODKEY,			XK_Print,  spawn,          SHCMD("screenshot full") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
