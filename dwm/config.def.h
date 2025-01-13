@@ -66,6 +66,8 @@ static const char *dmenucmd[]       = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]        = { "st", NULL };
 static const char *browsercmd[]     = { "librewolf", NULL };
 
+#include <X11/XF86keysym.h>
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -98,6 +100,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
+
+	{ 0, XF86XK_AudioMute,                         spawn,                  SHCMD("volume mute") },
+	{ 0, XF86XK_AudioRaiseVolume,                  spawn,                  SHCMD("volume up") },
+	{ 0, XF86XK_AudioLowerVolume,                  spawn,                  SHCMD("volume down") },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
