@@ -101,9 +101,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      			spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  			spawn,          SHCMD("screenshot full") },
 
-	{ 0, 				XF86XK_AudioMute, 		spawn,                  SHCMD("volume mute") },
-	{ 0, 				XF86XK_AudioRaiseVolume,        spawn,                  SHCMD("volume up") },
-	{ 0, 				XF86XK_AudioLowerVolume,        spawn,                  SHCMD("volume down") },
+	{ 0, 				XF86XK_AudioMute, 		spawn,         	SHCMD("volume mute") },
+	{ 0, 				XF86XK_AudioRaiseVolume,        spawn,          SHCMD("volume up") },
+	{ 0, 				XF86XK_AudioLowerVolume,        spawn,          SHCMD("volume down") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
