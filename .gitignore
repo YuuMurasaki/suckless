@@ -1,0 +1,27 @@
+# Executable files
+dmenu/dmenu
+dmenu/stest
+slock/slock
+dwm/dwm
+st/st
+
+# Ignore config.h file
+config.h
+
+# Ignore patch files
+*.orig
+*.rej
+
+# Ignore object files
+*.o
+
+# Ignore other common build artifacts
+*.out
+*.a
+*.so
+
+# Ignore generated files
+*.log
+
+# Ignore diff files
+*.diff
