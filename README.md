@@ -15,3 +15,4 @@
 ### Status bar
 - Normally, people use dwmbar or something similar to it. But for me, I use a shell script
 for that job.
+- All the script in ./scripts are meant to be use with dwm
