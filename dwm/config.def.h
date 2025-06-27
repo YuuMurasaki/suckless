@@ -61,7 +61,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browser[]  = { "librewolf", NULL };
 
 #include <X11/XF86keysym.h>
@@ -94,10 +94,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ ControlMask|ShiftMask,        XK_Escape, spawn,          SHCMD("st -e htop 2>/dev/null") },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e lf 2>/dev/null") },
+	{ ControlMask|ShiftMask,        XK_Escape, spawn,          SHCMD("alacritty -e htop 2>/dev/null") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("alacritty -e lf 2>/dev/null") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
-	{ MODKEY,                       XK_l,      spawn,          SHCMD("slock & xset dpms force off") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
 	{ MODKEY,			XK_F2, 	   spawn, 	   SHCMD("volume mute") },
