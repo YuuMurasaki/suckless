@@ -63,6 +63,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "librewolf", NULL };
+static const char *filemanager[] = { "st", "-e", "lf", NULL };
+static const char *taskmanager[] = { "st", "-e", "htop", NULL };
 
 #include <X11/XF86keysym.h>
 
@@ -94,8 +96,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ ControlMask|ShiftMask,        XK_Escape, spawn,          SHCMD("st -e htop 2>/dev/null") },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e lf 2>/dev/null") },
+	{ ControlMask|ShiftMask,        XK_Escape, spawn,          {.v = taskmanager } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = filemanager } },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
