@@ -9,8 +9,8 @@
     + dwm-notitle-20210715-138b405.diff
 
 # st
-    + st-scrollback-ringbuffer-0.9.2.diff
-    + st-scrollback-float-0.9.2.diff
+    + st-scrollback-0.9.2.diff
+    + st-scrollback-reflow-0.9.2.diff
     + st-expected-anysize-0.9.diff
     + st-bold-is-not-bright-20190127-3be4cf1.diff
     + st-font2-0.8.5.diff
