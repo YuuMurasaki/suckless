@@ -10,8 +10,12 @@
 
 # st
     + st-scrollback-ringbuffer-0.9.2.diff
+    + st-scrollback-float-0.9.2.diff
     + st-expected-anysize-0.9.diff
     + st-bold-is-not-bright-20190127-3be4cf1.diff
+    + st-font2-0.8.5.diff
+    + st-boxdraw_v2-0.8.5.diff
+    + st-glyph-wide-support-boxdraw-20220411-ef05519.diff
 
 ### Status bar
 - Normally, people use dwmbar or something similar to it. But for me, I use a shell script
