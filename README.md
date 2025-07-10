@@ -16,7 +16,8 @@
     + st-font2-0.8.5.diff
     + st-boxdraw_v2-0.8.5.diff
     + st-glyph-wide-support-boxdraw-20220411-ef05519.diff
+    + st-delkey-20201112-4ef0cbd.diff
 
 ### Status bar
-- Normally, people use dwmbar or something similar to it. But for me, I use a shell script
+- Normally, people use dwmbar or something similar. But I use a shell script
 for that job.
