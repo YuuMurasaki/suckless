@@ -101,9 +101,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
-	{ MODKEY,			XK_F2, 	   spawn, 	   SHCMD("volume mute") },
-	{ MODKEY,			XK_F3, 	   spawn, 	   SHCMD("volume down") },
-	{ MODKEY,			XK_F4, 	   spawn, 	   SHCMD("volume up") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("usb") },
 
 	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("volume mute") },
