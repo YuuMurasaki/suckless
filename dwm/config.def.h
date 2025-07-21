@@ -99,6 +99,7 @@ static const Key keys[] = {
 	{ ControlMask|ShiftMask,        XK_Escape, spawn,          {.v = taskmanager } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanager } },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
+	{ MODKEY,                       XK_p,      spawn,          SHCMD("pashmenu") },
 	{ MODKEY,                       XK_Insert, spawn,          SHCMD("bookmarks") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
