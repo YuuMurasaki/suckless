@@ -64,7 +64,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "firefox", NULL };
 static const char *filemanager[] = { "st", "-e", "fff", NULL };
-static const char *taskmanager[] = { "st", "-e", "htop", NULL };
+static const char *taskmanager[] = { "st", "-e", "htop", "--tree", NULL };
 
 #include <X11/XF86keysym.h>
 
@@ -99,6 +99,7 @@ static const Key keys[] = {
 	{ ControlMask|ShiftMask,        XK_Escape, spawn,          {.v = taskmanager } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanager } },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("power_options") },
+	{ MODKEY,                       XK_Insert, spawn,          SHCMD("bookmarks") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("usb") },
