@@ -63,8 +63,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "firefox", NULL };
-static const char *filemanager[] = { "st", "-e", "fff", NULL };
-static const char *taskmanager[] = { "st", "-e", "htop", "--tree", NULL };
 
 #include <X11/XF86keysym.h>
 
@@ -96,14 +94,12 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-	{ ControlMask|ShiftMask,        XK_Escape, spawn,          {.v = taskmanager } },
-	{ MODKEY,                       XK_e,      spawn,          {.v = filemanager } },
 	{ MODKEY,			XK_p,      spawn,          {.v = (const char*[]){ "pashmenu", NULL } } },
-	{ MODKEY,			XK_x,      spawn,          {.v = (const char*[]){ "power_options", NULL } } },
-	{ MODKEY,                       XK_Insert, spawn,          SHCMD("bookmarks") },
+	{ MODKEY,			XK_x,      spawn,          {.v = (const char*[]){ "sysact", NULL } } },
+	{ MODKEY,			XK_Insert, spawn,          {.v = (const char*[]){ "bookmarks", NULL } } },
+	{ MODKEY|ShiftMask,		XK_m, 	   spawn,          {.v = (const char*[]){ "usb", NULL } } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot crop") },
 	{ 0,				XK_Print,  spawn,          SHCMD("screenshot full") },
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("usb") },
 
 	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("volume mute") },
 	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("volume down") },
